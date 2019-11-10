@@ -120,6 +120,36 @@
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJN-th-c5K" userLabel="Timer View">
                                         <rect key="frame" x="0.0" y="571.5" width="374" height="246.5"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="bFX-NH-ABa">
+                                                <rect key="frame" x="0.0" y="118" width="374" height="11"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="10" id="rSr-Jb-fWa"/>
+                                                </constraints>
+                                                <color key="progressTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="trackTintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </progressView>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O92-Gq-yfC" userLabel="Medium Egg Button">
+                                                <rect key="frame" x="131.5" y="176.5" width="111" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="eDW-rt-gVD"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
+                                                <state key="normal" title="Reset Timer">
+                                                    <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="resetTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bOU-Dj-X0f"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="O92-Gq-yfC" secondAttribute="bottom" constant="20" id="AXu-MJ-JbQ"/>
+                                            <constraint firstItem="O92-Gq-yfC" firstAttribute="centerX" secondItem="nJN-th-c5K" secondAttribute="centerX" id="h75-42-Wd4"/>
+                                            <constraint firstItem="bFX-NH-ABa" firstAttribute="centerY" secondItem="nJN-th-c5K" secondAttribute="centerY" id="trs-ec-9XH"/>
+                                            <constraint firstItem="bFX-NH-ABa" firstAttribute="leading" secondItem="nJN-th-c5K" secondAttribute="leading" id="x3v-Xm-hCz"/>
+                                            <constraint firstAttribute="trailing" secondItem="bFX-NH-ABa" secondAttribute="trailing" id="z7H-Jg-EO4"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -135,6 +165,7 @@
                     </view>
                     <connections>
                         <outlet property="doneLabel" destination="XLm-5r-pSP" id="oxs-af-Ngr"/>
+                        <outlet property="progressBar" destination="bFX-NH-ABa" id="uyP-e4-RIA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
